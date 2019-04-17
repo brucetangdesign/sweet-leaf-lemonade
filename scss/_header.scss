@@ -1,0 +1,319 @@
+header{
+  @include prefixr(display,flex);
+  @include prefixr(align-items,center);
+  @include prefixr(justify-content,space-between);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  z-index: 3000;
+  padding: getRem(28px) getRem(28px) 0px;
+  max-width: $site-width-max;
+
+  @include breakpoint(s-768){
+    margin-bottom: 0;
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $sl-red;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out;
+
+    @include breakpoint(s-up){
+      display: none;
+    }
+  }
+
+  &.scrolled{
+    padding: 10px 20px 9px;
+
+    &:before{
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transition: all 300ms;
+      -webkit-transition: all 300ms;
+    }
+  }
+
+  &.mobile-nav-open{
+    &:before{
+      height: 100vh;
+    }
+  }
+}
+
+.logo-container{
+  position: relative;
+  width: 243px;
+
+  img{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background-image: url('../images/logo-bg-gradient.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    left: 50%;
+    top: 53%;
+    width: 154%;
+    height: 256%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+  }
+
+  .mobile-logo{
+    opacity: 0;
+    position: absolute;
+    width: 84px;
+    height: 45px;
+
+    @include breakpoint(s){
+      .scrolled &{
+        opacity: 1;
+        position: relative;
+
+        transition: opacity 300ms;
+        -webkit-transition: opacity 300ms;
+      }
+
+      .mobile-nav-open &{
+        opacity: 0;
+      }
+    }
+  }
+
+  .desktop-logo{
+    opacity: 1;
+
+    @include breakpoint(s){
+      .scrolled &{
+        opacity: 0;
+        position: absolute;
+      }
+    }
+  }
+
+  @include breakpoint(s){
+    width: 146px;
+
+    .scrolled &{
+      width: 84px;
+      &:after{
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint(xs){
+    width: 120px;
+
+    .scrolled &{
+      width: 84px;
+    }
+  }
+}
+
+nav{
+  font-family: "Vision Heavy";
+  font-size: getRem(18px);
+
+  ul.hr-list{
+    li{
+      margin-left: getRem(16px);
+      margin-right: getRem(16px);
+
+      &:first-of-type{
+        margin-left: 0;
+      }
+
+      &:last-of-type{
+        margin-right: 0;
+      }
+
+      @include breakpoint(xs-680){
+        &:after{ display: none; }
+        display: block;
+        margin: 3px 0;
+        text-align: right;
+
+        &:first-of-type{
+          margin-top: 0;
+        }
+
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  a{
+    color: $sl-red;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+
+    &:hover, &.selected{
+      opacity: 0.6;
+
+      transition: all 200ms;
+      -webkit-transition: all 200ms;
+    }
+
+    &.selected{
+      pointer-events: none;
+    }
+  }
+
+  @include breakpoint(s){
+    .scrolled &{
+      position: absolute;
+      display: none;
+    }
+
+    .mobile-nav-open &{
+      @include prefixr(display, flex);
+      @include prefixr(justify-content, center);
+      @include prefixr(align-items, center);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      font-size: 40px;
+
+
+      ul.hr-list{
+        li{
+          text-align: center !important;
+          margin-top: 50px !important;
+          margin-bottom: 50px !important;
+
+          a{
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.usda-badge{
+  position: absolute;
+  z-index: 3000;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 22px;
+  top: 100%;
+  width: getRem(80px);
+  height: getRem(80px);
+
+  background-image: url('../images/usda-badge.svg');
+  background-position: center;
+  background-size: contain;
+
+  @include breakpoint(m-l){
+    width: getRem(65px);
+    height: getRem(65px);
+    margin-top: 13px;
+  }
+
+  @include breakpoint(s){
+    width: getRem(50px);
+    height: getRem(50px);
+    margin-top: 8px;
+
+    .scrolled &{
+      opacity: 0;
+      position: absolute;
+    }
+  }
+}
+
+.usda-badge-mobile{
+  opacity: 0;
+  position: absolute;
+  z-index: 3000;
+  left: 100%;
+  margin-left: 13px;
+  @include center-vert;
+  width: 40px;
+  height: 40px;
+
+  background-image: url('../images/usda-badge-mobile.svg');
+  background-position: center;
+  background-size: contain;
+
+  @include breakpoint(s){
+    .scrolled &{
+      opacity: 1;
+
+      transition: opacity 300ms;
+      -webkit-transition: opacity 300ms;
+    }
+
+    .mobile-nav-open &{
+      opacity: 0;
+    }
+  }
+}
+
+.mobile-nav-icon{
+  opacity: 0;
+  pointer-events: none;
+  width: 30px;
+  height: 25px;
+  z-index: 2000000;
+
+  svg{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+
+    transition: 0.2s stroke;
+    -webkit-transition: 0.2s stroke;
+
+    line{
+      transform-origin: center;
+      stroke: #FFFFFF;
+      stroke-width: 5px;
+    }
+  }
+
+  @include breakpoint(s){
+    .scrolled &{
+      opacity: 1;
+      cursor: pointer;
+      pointer-events: all;
+
+      transition: opacity 300ms;
+      -webkit-transition: opacity 300ms;
+    }
+  }
+}

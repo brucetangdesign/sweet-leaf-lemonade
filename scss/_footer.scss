@@ -1,0 +1,77 @@
+footer{
+  @include prefixr(display,flex);
+  @include prefixr(align-items,center);
+  @include prefixr(justify-content,space-between);
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  z-index: 3000;
+  padding: 0px getRem(25px) getRem(25px);
+  max-width: $site-width-max;
+  color: #FFFFFF;
+
+  &.fixed{
+    @include breakpoint(m-up){
+      position: fixed;
+      bottom: 0;
+    }
+  }
+
+  p{
+    font-family: "Vision Heavy";
+    font-size: getRem(18px);
+    margin: 0;
+    color: $sl-brown;
+  }
+
+  a{ color: $sl-red; }
+
+  li{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-of-type{
+      padding-left: 0px;
+    }
+
+    &:last-of-type{
+      padding-right: 0px;
+    }
+
+    i{
+      font-size: getRem(23px);
+    }
+  }
+
+  @include breakpoint(xs){
+    @include prefixr(flex-wrap,wrap);
+    @include prefixr(flex-direction,column-reverse);
+
+    .footer-social-menu{
+      margin-bottom: getRem(20px);
+    }
+  }
+}
+
+.social-icon{
+  display: inline-block;
+  width: getRem(42px);
+  height: getRem(42px);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.fb{
+    background-image: url('../images/social-icon-fb.png');
+  }
+
+  &.insta{
+    background-image: url('../images/social-icon-insta.png');
+  }
+
+  &.tw{
+    background-image: url('../images/social-icon-tw.png');
+  }
+}

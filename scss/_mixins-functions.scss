@@ -1,0 +1,133 @@
+//browser prefixes
+@mixin prefixr($property, $value, $prefixes: (webkit, moz, ms, o) ) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: #{$value};
+  }
+  @if($property==display and $value==flex){
+    @each $prefix in $prefixes {
+      #{$property}: -#{$prefix}-#{$value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+//Responsive breakpoints
+@mixin breakpoint($point) {
+  @if $point == xxl-up {
+    @media (min-width: 1450px) { @content; }
+  }
+
+  @if $point == xxl {
+    @media (max-width: 1450px) { @content; }
+  }
+
+  @if $point == xl {
+    @media (min-width: 1281px) { @content; }
+  }
+
+  @if $point == l {
+    @media (max-width: 1280px) { @content; }
+  }
+
+  @if $point == m-l-up {
+    @media (min-width: 1189px) { @content; }
+  }
+
+  @if $point == m-l {
+    @media (max-width: 1188px) { @content; }
+  }
+
+  @if $point == m-up {
+    @media (min-width: 1021px) { @content; }
+  }
+
+  @if $point == m {
+    @media (max-width: 1020px) { @content; }
+  }
+
+  @if $point == m-s-up {
+    @media (min-width: 961px) { @content; }
+  }
+
+  @if $point == m-s {
+    @media (max-width: 960px) { @content; }
+  }
+
+  @if $point == s-up {
+    @media (min-width: 769px) { @content; }
+  }
+
+  @if $point == s {
+    @media (max-width: 768px) { @content; }
+  }
+
+  @if $point == xs-680-up {
+    @media (min-width: 681px) { @content; }
+  }
+
+  @if $point == xs-680 {
+    @media (max-width: 680px) { @content; }
+  }
+
+  @if $point == xs-up {
+    @media (min-width: 481px) { @content; }
+  }
+
+  @if $point == xs {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+//Rem calculator
+@function getRem($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}
+
+/****************************
+ HIGH PPI DISPLAY BACKGROUNDS
+*****************************/
+
+@mixin background-2x($path, $ext: "png", $w: auto, $h: auto, $pos: left top, $repeat: no-repeat) {
+
+  $at1x_path: "#{$path}.#{$ext}";
+  $at2x_path: "#{$path}@2x.#{$ext}";
+
+  background-image: url("#{$at1x_path}");
+  background-size: $w $h;
+  @if $w == "contain" {
+    background-size: $w;
+  }
+  background-position: $pos;
+  background-repeat: $repeat;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+  all and (-o-min-device-pixel-ratio: 3/2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+    background-image: url("#{$at2x_path}");
+  }
+}
+
+//Size an element as a proportion of screen width
+@mixin size-to-screen-width($natW,$natH,$minPerc:0.1,$widthFactor:$site-width-max){
+  $site-width-num: $widthFactor / 1px;
+
+  width: (($natW / $site-width-num) * 100) + 0vw;
+  min-width: getRem(($natW * $minPerc) + 0px);
+  max-width: getRem($natW + 0px);
+
+  @if($natH != auto){
+    height: (($natH / $site-width-num) * 100) + 0vw;
+    min-height: getRem(($natH * $minPerc) + 0px);
+    max-height: getRem($natH + 0px);
+  }
+}
+
+//Vertically center an element within it's container
+@mixin center-vert(){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}

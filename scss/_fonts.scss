@@ -1,0 +1,33 @@
+//webfonts
+@font-face {
+  font-family: 'Farao Black';
+  src:  url('../webfonts/farao-black.woff2') format('woff2'),
+        url('../webfonts/farao-black.woff') format('woff'),
+        url('../webfonts/farao-black.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Vision';
+  src:  url('../webfonts/vision.woff2') format('woff2'),
+        url('../webfonts/vision.woff') format('woff'),
+        url('../webfonts/vision.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Vision Bold';
+  src:  url('../webfonts/vision-bold.woff2') format('woff2'),
+        url('../webfonts/vision-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vision Heavy';
+  src:  url('../webfonts/vision-heavy.woff2') format('woff2'),
+        url('../webfonts/vision-heavy.woff') format('woff'),
+        url('../webfonts/vision-heavy.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Vision Black';
+  src:  url('../webfonts/vision-black.woff2') format('woff2'),
+        url('../webfonts/vision-black.woff') format('woff');
+}
