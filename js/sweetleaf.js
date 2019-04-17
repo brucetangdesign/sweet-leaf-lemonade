@@ -6,7 +6,6 @@ $( document ).ready(function() {
   var sec4 = false;
   var $bg = $("#bg");
 
-  /*
   checkScroll();
 
   //call the check when you scroll or resize
@@ -48,7 +47,7 @@ $( document ).ready(function() {
     }
 
     $bg.children().each(function(index){
-      if(!$(this).hasClass("bg-gradient"+secNum)){
+      if(!$(this).hasClass("bg-gradient"+secNum) && !$(this).hasClass("texture-top")){
         if(!$(this).hasClass("hidden")){
           $(this).addClass("hidden");
         }
@@ -65,7 +64,6 @@ $( document ).ready(function() {
     }
     eval("sec" + secNum + " = true");
   }
-  */
 
   var rellax = new Rellax('.rellax', {
     center: true

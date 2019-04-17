@@ -10,7 +10,7 @@ html,body{
   color: $sl-brown;
   font-family: "Vision Heavy";
   font-size: $base-font-size;
-  background-color: $sl-pink;
+  background-color: $sl-yellow;
   //overflow-x: hidden;
 
   @include breakpoint(s){
@@ -40,6 +40,44 @@ h1{
   @include breakpoint(s){
     font-size: getRem(30px);
     margin: 0.5rem 0;
+  }
+
+  &.h1-sans{
+    font-family: "Vision Black";
+    font-size: getRem(80px);
+    color: $sl-red;
+    text-transform: uppercase;
+    line-height: 0.81;
+    letter-spacing: -3px;
+
+    .larger-line{
+      display: block;
+      font-size: getRem(90px);
+    }
+
+    @include breakpoint(l){
+      font-size: getRem(68px);
+
+      .larger-line{
+        font-size: getRem(77px);
+      }
+    }
+
+    @include breakpoint(m){
+      font-size: getRem(58px);
+
+      .larger-line{
+        font-size: getRem(66px);
+      }
+    }
+
+    @include breakpoint(s){
+      font-size: getRem(50px);
+
+      .larger-line{
+        font-size: getRem(56px);
+      }
+    }
   }
 }
 

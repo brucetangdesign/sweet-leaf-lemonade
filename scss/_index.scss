@@ -20,7 +20,7 @@
 
 
 #bg{
-  height: 100vh;
+  height: 100%;
 
   &.color{
     opacity: 1;
@@ -31,13 +31,13 @@
   }
 
   &.bg1{
-    background-color: $sl-orange;
+    background-color: $sl-yellow;
   }
   &.bg2{
-    background-color: #d7de2c;
+    background-color: #fdc07c;
   }
   &.bg3{
-    background-color: #e8851a;
+    background-color: #f9c9be;
   }
   &.bg4{
     background-color: $sl-pink;
@@ -55,17 +55,17 @@
     opacity: 1;
 
     &.bg-gradient1{
-      background-image: url('../images/bg-gradient-slide1.svg');
+      background-image: url('../images/bg-gradient-landing.png');
       //background-color: $sl-orange;
     }
 
     &.bg-gradient2{
-      background-image: url('../images/bg-gradient-slide2.svg');
+      background-image: url('../images/bg-gradient-mimi.png');
       //background-color: #d7de2c;
     }
 
     &.bg-gradient3{
-      background-image: url('../images/bg-gradient-slide3.svg');
+      background-image: url('../images/bg-gradient-ingredients.png');
       //background-color: #e8851a;
     }
 
@@ -80,8 +80,9 @@
   }
 }
 
-.texture-top{
+.texture-top, #bg > div.texture-top{
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -92,7 +93,20 @@
   @include background-2x( '../images/bg-texture', 'png', contain, auto, center top, no-repeat );
 }
 
-.floral-bg, .nyc-bg, .skyline, .lights{
+.texture-bottom, #bg > div.texture-bottom{
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 1900px;
+  height: 100%;
+  @include background-2x( '../images/bg-texture-bottom', 'png', contain, auto, center bottom, no-repeat );
+}
+
+.nyc-bg, .skyline, .nyc-skyline-lemon{
   position: absolute;
   top: 0;
   left: 0;
@@ -102,24 +116,6 @@
   background-repeat: no-repeat;
 }
 
-.floral-bg{
-  width: 34.2vw;
-  max-width: 438px;
-  background-image: url('../images/floral-bg.svg');
-  background-size: cover;
-  background-position: right;
-
-  &.reverse{
-    left: auto;
-    right: 0;
-    transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-  }
-
-  @include breakpoint(s){
-    background-size: cover;
-  }
-}
 
 .skyline{
   background-image: url('../images/slide-3-bg-skyline.png');
@@ -154,6 +150,10 @@
 .nyc-bg{
   @include background-2x( '../images/nyc-bg', 'png', contain, auto, center bottom, no-repeat );
 
+  .bg-gradient1 &{
+    @include background-2x( '../images/nyc-bg-yellow', 'png', contain, auto, center bottom, no-repeat );
+  }
+
   @include breakpoint(m){
     background-size: 150vw;
   }
@@ -187,16 +187,12 @@
   &.slide1{
     margin-top: 150px;
 
-    .bg-graphics{
-      background-image: url('../images/slide1-leaves.svg');
-    }
-
     @include breakpoint(xs-680){
       margin-top: 80px;
     }
   }
 
-  &.slide2{
+  &.slide3{
     @include breakpoint(xs-680){
       margin-bottom: 7rem;
     }
@@ -207,7 +203,7 @@
     }
   }
 
-  &.slide3{
+  &.slide2{
     .bg-graphics{
       background-image: url('../images/slide3-stars.svg');
     }
@@ -308,8 +304,7 @@
     max-height: 856px;
     min-width: 358px;
     min-height: 491px;
-    background-image: url('../images/slide1-bottle-original.png');
-    background-position: top;
+    @include background-2x( '../images/slide1-bottle-classic', 'png', contain, auto, center top, no-repeat );
 
     @include breakpoint(xs){
       min-width: 280px;
@@ -317,12 +312,12 @@
     }
   }
 
-  .slide2 &{
+  .slide3 &{
     max-width: 835px;
-    background-image: url('../images/slide-organic-ingredients.png');
+    @include background-2x( '../images/slide-ingredients', 'png', contain, auto, center, no-repeat );
 
     @include breakpoint(s){
-      @include background-2x( '../images/slide-organic-ingredients-mobile', 'png', contain, auto, center, no-repeat );
+      @include background-2x( '../images/slide-ingredients-mobile', 'png', contain, auto, center, no-repeat );
       background-size: contain !important;
     }
 
@@ -332,73 +327,11 @@
     }
   }
 
-  .slide3 &{
+  .slide2 &{
     max-width: 600px;
-    background-image: url('../images/slide-mimi.png');
+    @include background-2x( '../images/slide-mimi', 'png', contain, auto, center, no-repeat );
   }
 
-  .core &{
-    @include background-2x( '../images/home-about-core', 'png', contain, auto, center, no-repeat );
-    background-size: contain !important;
-
-    width: 100%;
-    height: 38.6vw;
-    max-width: 909px;
-    max-height: 737px;
-
-    @include breakpoint(s){
-      height: 72vw;
-    }
-  }
-
-  .semisweet &{
-    background-image: url('../images/home-about-semisweet.png');
-
-    width: 100%;
-    height: 39vw;
-    max-width: 692px;
-    max-height: 782px;
-
-    @include breakpoint(s){
-      height: 100vw;
-    }
-  }
-
-  .unsweet &{
-    background-image: url('../images/home-about-unsweet.png');
-
-    width: 100%;
-    height: 38.6vw;
-    max-width: 663px;
-    max-height: 737px;
-
-    @include breakpoint(s){
-      height: 96vw;
-    }
-  }
-
-  &.glow{
-    position:absolute;
-    z-index: 100;
-    max-height: 76vh;
-    background-image: url('../images/slide-organic-ingredients-bg.png');
-
-    .slide2 &{
-      top: 27px;
-
-      @include breakpoint(xs-680){
-        top: auto;
-      }
-    }
-
-    .slide3 &{
-      max-width: 779px;
-
-      @include breakpoint(xs-680){
-        top: 40px;
-      }
-    }
-  }
 }
 
 .slide-copy{
@@ -469,8 +402,6 @@
   margin-left: auto;
   //margin-bottom: 3rem;
   height: auto;
-  padding-top: 280px;
-  padding-bottom: 70px;
   text-align: center;
 
   h1{
@@ -850,10 +781,10 @@ table.nutritional-chart{
   background-size: contain;
   background-repeat: no-repeat;
 
-  &.mint{
-    background-image: url('../images/slide1-bottle-mint.png');
+  &.pom-blueberry{
+    @include background-2x( '../images/slide1-bottle-pom-blueberry', 'png', contain, auto, center top, no-repeat );
     top: 29%;
-    left: 23%;
+    left: 18%;
     width: 25.7vw;
     height: 29.2vw;
     min-width: getRem(268px);
@@ -862,19 +793,19 @@ table.nutritional-chart{
     max-height: getRem(561px);
 
     @include breakpoint(m-s){
-      left: 17%;
+      left: 13%;
     }
 
     @include breakpoint(s){
       top: 46%;
-      left: 12%;
+      left: 9%;
     }
 
     @include breakpoint(xs-680){
       min-width: 165px;
       min-height: 186px;
       top: 48%;
-      left: 7%;
+      left: 4%;
     }
 
     @include breakpoint(xs){
@@ -882,8 +813,8 @@ table.nutritional-chart{
     }
   }
 
-  &.peach{
-    background-image: url('../images/slide1-bottle-peach.png');
+  &.orange-mango{
+    @include background-2x( '../images/slide1-bottle-orange-mango', 'png', contain, auto, center top, no-repeat );
     top: 14%;
     right: 8%;
     width: 14.8vw;
@@ -915,8 +846,8 @@ table.nutritional-chart{
     }
   }
 
-  &.honey{
-    background-image: url('../images/slide1-bottle-honey.png');
+  &.cran-lime{
+    @include background-2x( '../images/slide1-bottle-cran-lime', 'png', contain, auto, center top, no-repeat );
     top: 33%;
     left: 3%;
     width: 21.1vw;
@@ -944,27 +875,6 @@ table.nutritional-chart{
   }
 }
 
-.organic-stamp{
-  position: absolute;
-  z-index: 2;
-  right: 2rem;
-  bottom: 20vh;
-  width: 16.7vw;
-  height: 16.7vw;
-  min-width: getRem(40px);
-  min-height: getRem(40px);
-  max-width: 214px;
-  max-height: 214px;
-
-  background-image: url('../images/organic-stamp.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include breakpoint(xs-680){
-    right: 1rem;
-    bottom: 4vh;
-  }
-}
 
 .mint-fruit{
   position: absolute;
@@ -991,13 +901,39 @@ table.nutritional-chart{
   background-image: url('../images/slide1-bg-lemon.png');
   background-size: contain;
   background-repeat: no-repeat;
-  left: 2%;
-  bottom: 40%;
-  margin: auto;
-  width: 8.1vw;
-  height: 6.3vw;
-  max-width: getRem(156px);
-  max-height: getRem(121px);
+  left: 0;
+  top: 35%;
+  @include size-to-screen-width(137,200,0.4);
+
+  @include breakpoint(xs-680){
+    display: none;
+  }
+}
+
+.bg-lemon-cran{
+  position: absolute;
+  z-index: 2;
+  background-image: url('../images/slide1-bg-lemon-cran.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 2.2vw;
+  top: 42%;
+  @include size-to-screen-width(205,210,0.4);
+
+  @include breakpoint(xs-680){
+    display: none;
+  }
+}
+
+.bg-lemon-right{
+  position: absolute;
+  z-index: 2;
+  background-image: url('../images/slide1-bg-lemon-right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  @include size-to-screen-width(199,157,0.4);
 
   @include breakpoint(xs-680){
     display: none;
@@ -1010,167 +946,162 @@ table.nutritional-chart{
   background-image: url('../images/slide1-bg-orange.png');
   background-size: contain;
   background-repeat: no-repeat;
-  right: 5%;
-  bottom: 34%;
-  margin: auto;
-  width: 6.9vw;
-  height: 6.9vw;
-  max-width: getRem(133px);
-  max-height: getRem(133px);
+  right: 0;
+  top: 32%;
+  @include size-to-screen-width(110,170,0.4);
 
   @include breakpoint(xs-680){
     display: none;
   }
 }
 
-.bg-text{
+
+.landing-clouds-left{
   position: absolute;
-  z-index: 2;
-  right: 18%;
-  bottom: 15vh;
-  width: 37.8vw;
-  height: 28.2vw;
-  min-width: getRem(200px);
-  min-height: getRem(44px);
-  max-width: getRem(484px);
-  max-height: getRem(106px);
+  left: 0;
+  top: -150px;
+  @include background-2x( '../images/landing-clouds-left', 'png', contain, auto, left top, no-repeat );
 
-  background-image: url('../images/slide-2-bg-text.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include breakpoint(xs-680){
-    bottom: -20%;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
+  @include size-to-screen-width(996,791,0.4);
 }
 
-.i-love-you{
+.landing-clouds-right{
   position: absolute;
-  z-index: 2;
-  left: 41%;
-  top: 9%;
-  width: 24.8vw;
-  height: 24.8vw;
-  min-width: getRem(150px);
-  min-height: getRem(150px);
-  max-width: 317px;
-  max-height: 317px;
-
-  background-image: url('../images/i-love-you.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include breakpoint(xs-680){
-    top: 15%;
-    left: 0;
-  }
-}
-
-.bottle-cap{
-  position: absolute;
-  z-index: 2;
-  right: 15%;
-  bottom: 8vh;
-  width: 15.8vw;
-  height: 11.5vw;
-  min-width: getRem(124px);
-  min-height: getRem(90px);
-  max-width: getRem(304px);
-  max-height: getRem(221px);
-
-  background-image: url('../images/bottle-cap.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include breakpoint(xs-680){
-    right: -2rem;
-    bottom: 5vh;
-  }
-}
-
-.est-1998{
-  position: absolute;
-  z-index: 2;
-  right: 8%;
-  bottom: 32vh;
-  width: 5.6vw;
-  height: 5.6vw;
-  min-width: getRem(60px);
-  min-height: getRem(60px);
-  max-width: getRem(109px);
-  max-height: getRem(109px);
-
-  background-image: url('../images/est-1998.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include breakpoint(xs-680){
-    right: 1rem;
-    bottom: auto;
-    top: 50%;
-  }
-}
-
-.austin-stamp{
-  position: absolute;
-  z-index: 2;
-  right: 2rem;
-  top: 16vh;
-  width: 13.6vw;
-  height: 13.6vw;
-  min-width: getRem(100px);
-  min-height: getRem(100px);
-  max-width: 174px;
-  max-height: 174px;
-
-  background-image: url('../images/austin-stamp.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @include breakpoint(xs-680){
-    right: 1rem;
-    top: 25vh;
-  }
-}
-
-.cactus{
-  position: absolute;
-  z-index: 2;
   right: 0;
-  bottom: 18vh;
-  width: 14.8vw;
-  height: 29.5vw;
-  min-width: getRem(45px);
-  min-height: getRem(90px);
-  max-width: getRem(189px);
-  max-height: getRem(378px);
+  top: 70px;
+  @include background-2x( '../images/landing-clouds-right', 'png', contain, auto, left top, no-repeat );
 
-  background-image: url('../images/cactus.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  @include size-to-screen-width(784,580,0.4);
+}
 
-  @include breakpoint(xs-680){
-    right: -2rem;
+.landing-clouds-right{
+  position: absolute;
+  right: 0;
+  top: 70px;
+  @include background-2x( '../images/landing-clouds-right', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(784,580,0.4);
+}
+
+.mimi-clouds-left{
+  position: absolute;
+  left: 0;
+  top: 200px;
+  @include background-2x( '../images/mimi-clouds-left', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(810,803,0.4);
+}
+
+.mimi-clouds-right{
+  position: absolute;
+  right: 0;
+  top: 300px;
+  @include background-2x( '../images/mimi-clouds-right', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(367,641,0.4);
+}
+
+.mimi-left-lem-blueberry{
+  position: absolute;
+  left: 0;
+  top: 400px;
+  @include background-2x( '../images/mimi-side-left-lem-blueberry', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(100,381,0.5);
+
+  @include breakpoint(m){
+    top: 530px;
   }
 
-  &.reverse{
-    transform: scaleX(-1);
-    width: 11.7vw;
-    height:23.4vw;
-    min-width: getRem(35px);
-    min-height: getRem(70px);
-    max-width: getRem(150px);
-    max-height: getRem(300px);
-    right: auto !important;
-    left: -1rem;
-    bottom: 11vh;
+  @include breakpoint(s){
+    display: none;
+  }
+}
 
-    @include breakpoint(xs-680){
-      bottom: 20vh;
-    }
+.mimi-left-pom-lem-orange{
+  position: absolute;
+  left: 4vw;
+  bottom: 200px;
+  @include background-2x( '../images/mimi-side-left-pom-lem-orange', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(223,469,0.5);
+
+  @include breakpoint(m){
+    bottom: 300px;
+  }
+
+  @include breakpoint(s){
+    display: none;
+  }
+}
+
+.mimi-right-lime-mango{
+  position: absolute;
+  right: 4vw;
+  bottom: 100px;
+  @include background-2x( '../images/mimi-side-right-lime-mango', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(197,460,0.5);
+
+  @include breakpoint(m){
+    bottom: 0px;
+  }
+
+  @include breakpoint(s){
+    display: none;
+  }
+}
+
+.mimi-right-orange-cran{
+  position: absolute;
+  right: 1vw;
+  top: 400px;
+  @include background-2x( '../images/mimi-side-right-orange-cran', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(124,318,0.5);
+
+  @include breakpoint(m){
+    top: 600px;
+  }
+
+  @include breakpoint(s){
+    display: none;
+  }
+}
+
+.ingredients-clouds-left{
+  position: absolute;
+  left: 0;
+  top: 550px;
+  @include background-2x( '../images/ingredients-clouds-left', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(148,129,0.4);
+}
+
+.ingredients-clouds-right{
+  position: absolute;
+  right: 0;
+  top: 30px;
+  @include background-2x( '../images/ingredients-clouds-right', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(942,923,0.4);
+}
+
+.ingredients-right-lem{
+  position: absolute;
+  right: 0;
+  bottom: 200px;
+  z-index: 1;
+  @include background-2x( '../images/ingredients-side-right-lem', 'png', contain, auto, left top, no-repeat );
+
+  @include size-to-screen-width(295,271,0.5);
+
+  @include breakpoint(m){
+    bottom: 100px;
+  }
+
+  @include breakpoint(s){
+    display: none;
   }
 }
 

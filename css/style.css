@@ -27,7 +27,7 @@ html, body {
   color: #401f1f;
   font-family: "Vision Heavy";
   font-size: 16px;
-  background-color: #e7cad3; }
+  background-color: #f9ec7a; }
   @media (max-width: 768px) {
     html, body {
       font-size: 14px; } }
@@ -51,6 +51,31 @@ h1 {
     h1 {
       font-size: 1.875rem;
       margin: 0.5rem 0; } }
+  h1.h1-sans {
+    font-family: "Vision Black";
+    font-size: 5rem;
+    color: #d0202f;
+    text-transform: uppercase;
+    line-height: 0.81;
+    letter-spacing: -3px; }
+    h1.h1-sans .larger-line {
+      display: block;
+      font-size: 5.625rem; }
+    @media (max-width: 1280px) {
+      h1.h1-sans {
+        font-size: 4.25rem; }
+        h1.h1-sans .larger-line {
+          font-size: 4.8125rem; } }
+    @media (max-width: 1020px) {
+      h1.h1-sans {
+        font-size: 3.625rem; }
+        h1.h1-sans .larger-line {
+          font-size: 4.125rem; } }
+    @media (max-width: 768px) {
+      h1.h1-sans {
+        font-size: 3.125rem; }
+        h1.h1-sans .larger-line {
+          font-size: 3.5rem; } }
 
 h2 {
   font-family: "Farao Black";
@@ -211,6 +236,9 @@ header {
       -webkit-transition: all 300ms; }
   header.mobile-nav-open:before {
     height: 100vh; }
+
+.mobile-nav-open nav a {
+  color: #FFFFFF; }
 
 .logo-container {
   position: relative;
@@ -506,17 +534,17 @@ footer {
   padding: 0; }
 
 #bg {
-  height: 100vh; }
+  height: 100%; }
   #bg.color {
     opacity: 1; }
     #bg.color.hidden {
       opacity: 0; }
   #bg.bg1 {
-    background-color: #f79c23; }
+    background-color: #f9ec7a; }
   #bg.bg2 {
-    background-color: #d7de2c; }
+    background-color: #fdc07c; }
   #bg.bg3 {
-    background-color: #e8851a; }
+    background-color: #f9c9be; }
   #bg.bg4 {
     background-color: #e7cad3; }
   #bg > div {
@@ -530,18 +558,19 @@ footer {
     background-size: 100% 100%;
     opacity: 1; }
     #bg > div.bg-gradient1 {
-      background-image: url("../images/bg-gradient-slide1.svg"); }
+      background-image: url("../images/bg-gradient-landing.png"); }
     #bg > div.bg-gradient2 {
-      background-image: url("../images/bg-gradient-slide2.svg"); }
+      background-image: url("../images/bg-gradient-mimi.png"); }
     #bg > div.bg-gradient3 {
-      background-image: url("../images/bg-gradient-slide3.svg"); }
+      background-image: url("../images/bg-gradient-ingredients.png"); }
     #bg > div.bg-gradient4 {
       background-image: url("../images/bg-gradient-products.png"); }
     #bg > div.hidden {
       opacity: 0; }
 
-.texture-top {
+.texture-top, #bg > div.texture-top {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -555,31 +584,35 @@ footer {
   background-position: center top;
   background-repeat: no-repeat; }
   @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-    .texture-top {
+    .texture-top, #bg > div.texture-top {
       background-image: url("../images/bg-texture@2x.png"); } }
 
-.floral-bg, .nyc-bg, .skyline, .lights {
+.texture-bottom, #bg > div.texture-bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 1900px;
+  height: 100%;
+  background-image: url("../images/bg-texture-bottom.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .texture-bottom, #bg > div.texture-bottom {
+      background-image: url("../images/bg-texture-bottom@2x.png"); } }
+
+.nyc-bg, .skyline, .nyc-skyline-lemon {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat; }
-
-.floral-bg {
-  width: 34.2vw;
-  max-width: 438px;
-  background-image: url("../images/floral-bg.svg");
-  background-size: cover;
-  background-position: right; }
-  .floral-bg.reverse {
-    left: auto;
-    right: 0;
-    transform: scaleX(-1);
-    -webkit-transform: scaleX(-1); }
-  @media (max-width: 768px) {
-    .floral-bg {
-      background-size: cover; } }
 
 .skyline {
   background-image: url("../images/slide-3-bg-skyline.png");
@@ -614,6 +647,15 @@ footer {
   @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
     .nyc-bg {
       background-image: url("../images/nyc-bg@2x.png"); } }
+  .bg-gradient1 .nyc-bg {
+    background-image: url("../images/nyc-bg-yellow.png");
+    background-size: contain auto;
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat; }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .bg-gradient1 .nyc-bg {
+        background-image: url("../images/nyc-bg-yellow@2x.png"); } }
   @media (max-width: 1020px) {
     .nyc-bg {
       background-size: 150vw; } }
@@ -640,18 +682,16 @@ footer {
       height: auto; } }
   .slide-main.slide1 {
     margin-top: 150px; }
-    .slide-main.slide1 .bg-graphics {
-      background-image: url("../images/slide1-leaves.svg"); }
     @media (max-width: 680px) {
       .slide-main.slide1 {
         margin-top: 80px; } }
   @media (max-width: 680px) {
-    .slide-main.slide2 {
+    .slide-main.slide3 {
       margin-bottom: 7rem; } }
-  .slide-main.slide2 .bg-graphics {
+  .slide-main.slide3 .bg-graphics {
     margin-top: 6rem;
     background-image: url("../images/slide2-leaves-fruit.svg"); }
-  .slide-main.slide3 .bg-graphics {
+  .slide-main.slide2 .bg-graphics {
     background-image: url("../images/slide3-stars.svg"); }
 
 .bg-graphics {
@@ -775,84 +815,54 @@ footer {
     max-height: 856px;
     min-width: 358px;
     min-height: 491px;
-    background-image: url("../images/slide1-bottle-original.png");
-    background-position: top; }
+    background-image: url("../images/slide1-bottle-classic.png");
+    background-size: contain auto;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat; }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .slide1 .slide-image {
+        background-image: url("../images/slide1-bottle-classic@2x.png"); } }
     @media (max-width: 480px) {
       .slide1 .slide-image {
         min-width: 280px;
         min-height: 384px; } }
-  .slide2 .slide-image {
+  .slide3 .slide-image {
     max-width: 835px;
-    background-image: url("../images/slide-organic-ingredients.png"); }
+    background-image: url("../images/slide-ingredients.png");
+    background-size: contain auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .slide3 .slide-image {
+        background-image: url("../images/slide-ingredients@2x.png"); } }
     @media (max-width: 768px) {
-      .slide2 .slide-image {
-        background-image: url("../images/slide-organic-ingredients-mobile.png");
+      .slide3 .slide-image {
+        background-image: url("../images/slide-ingredients-mobile.png");
         background-size: contain auto;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain !important; } }
   @media all and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), all and (max-width: 768px) and (-o-min-device-pixel-ratio: 3 / 2), all and (max-width: 768px) and (min--moz-device-pixel-ratio: 1.5), all and (max-width: 768px) and (min-device-pixel-ratio: 1.5) {
-    .slide2 .slide-image {
-      background-image: url("../images/slide-organic-ingredients-mobile@2x.png"); } }
+    .slide3 .slide-image {
+      background-image: url("../images/slide-ingredients-mobile@2x.png"); } }
 
     @media (max-width: 680px) {
-      .slide2 .slide-image {
+      .slide3 .slide-image {
         background-position: bottom;
         background-size: contain !important; } }
-  .slide3 .slide-image {
+  .slide2 .slide-image {
     max-width: 600px;
-    background-image: url("../images/slide-mimi.png"); }
-  .core .slide-image {
-    background-image: url("../images/home-about-core.png");
+    background-image: url("../images/slide-mimi.png");
     background-size: contain auto;
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain !important;
-    width: 100%;
-    height: 38.6vw;
-    max-width: 909px;
-    max-height: 737px; }
+    background-repeat: no-repeat; }
     @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-      .core .slide-image {
-        background-image: url("../images/home-about-core@2x.png"); } }
-    @media (max-width: 768px) {
-      .core .slide-image {
-        height: 72vw; } }
-  .semisweet .slide-image {
-    background-image: url("../images/home-about-semisweet.png");
-    width: 100%;
-    height: 39vw;
-    max-width: 692px;
-    max-height: 782px; }
-    @media (max-width: 768px) {
-      .semisweet .slide-image {
-        height: 100vw; } }
-  .unsweet .slide-image {
-    background-image: url("../images/home-about-unsweet.png");
-    width: 100%;
-    height: 38.6vw;
-    max-width: 663px;
-    max-height: 737px; }
-    @media (max-width: 768px) {
-      .unsweet .slide-image {
-        height: 96vw; } }
-  .slide-image.glow {
-    position: absolute;
-    z-index: 100;
-    max-height: 76vh;
-    background-image: url("../images/slide-organic-ingredients-bg.png"); }
-    .slide2 .slide-image.glow {
-      top: 27px; }
-      @media (max-width: 680px) {
-        .slide2 .slide-image.glow {
-          top: auto; } }
-    .slide3 .slide-image.glow {
-      max-width: 779px; }
-      @media (max-width: 680px) {
-        .slide3 .slide-image.glow {
-          top: 40px; } }
+      .slide2 .slide-image {
+        background-image: url("../images/slide-mimi@2x.png"); } }
 
 .slide-copy {
   width: 50%;
@@ -906,8 +916,6 @@ footer {
   width: 100%;
   margin-left: auto;
   height: auto;
-  padding-top: 280px;
-  padding-bottom: 70px;
   text-align: center; }
   #about-products.slide-main h1 {
     color: #401f1f;
@@ -1237,34 +1245,45 @@ table.nutritional-chart {
   z-index: 2;
   background-size: contain;
   background-repeat: no-repeat; }
-  .bottle.mint {
-    background-image: url("../images/slide1-bottle-mint.png");
+  .bottle.pom-blueberry {
+    background-image: url("../images/slide1-bottle-pom-blueberry.png");
+    background-size: contain auto;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
     top: 29%;
-    left: 23%;
+    left: 18%;
     width: 25.7vw;
     height: 29.2vw;
     min-width: 16.75rem;
     min-height: 18.9375rem;
     max-width: 30.9375rem;
     max-height: 35.0625rem; }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .bottle.pom-blueberry {
+        background-image: url("../images/slide1-bottle-pom-blueberry@2x.png"); } }
     @media (max-width: 960px) {
-      .bottle.mint {
-        left: 17%; } }
+      .bottle.pom-blueberry {
+        left: 13%; } }
     @media (max-width: 768px) {
-      .bottle.mint {
+      .bottle.pom-blueberry {
         top: 46%;
-        left: 12%; } }
+        left: 9%; } }
     @media (max-width: 680px) {
-      .bottle.mint {
+      .bottle.pom-blueberry {
         min-width: 165px;
         min-height: 186px;
         top: 48%;
-        left: 7%; } }
+        left: 4%; } }
     @media (max-width: 480px) {
-      .bottle.mint {
+      .bottle.pom-blueberry {
         left: 3%; } }
-  .bottle.peach {
-    background-image: url("../images/slide1-bottle-peach.png");
+  .bottle.orange-mango {
+    background-image: url("../images/slide1-bottle-orange-mango.png");
+    background-size: contain auto;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
     top: 14%;
     right: 8%;
     width: 14.8vw;
@@ -1273,14 +1292,17 @@ table.nutritional-chart {
     min-height: 15.3125rem;
     max-width: 17.8125rem;
     max-height: 23.5rem; }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .bottle.orange-mango {
+        background-image: url("../images/slide1-bottle-orange-mango@2x.png"); } }
     @media (max-width: 1280px) {
-      .bottle.peach {
+      .bottle.orange-mango {
         top: 21%; } }
     @media (max-width: 960px) {
-      .bottle.peach {
+      .bottle.orange-mango {
         top: 34%; } }
     @media (max-width: 768px) {
-      .bottle.peach {
+      .bottle.orange-mango {
         top: 41%;
         right: 3%;
         transform: none !important;
@@ -1288,10 +1310,14 @@ table.nutritional-chart {
         min-width: 133px;
         min-height: 176px; } }
     @media (max-width: 480px) {
-      .bottle.peach {
+      .bottle.orange-mango {
         display: none; } }
-  .bottle.honey {
-    background-image: url("../images/slide1-bottle-honey.png");
+  .bottle.cran-lime {
+    background-image: url("../images/slide1-bottle-cran-lime.png");
+    background-size: contain auto;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
     top: 33%;
     left: 3%;
     width: 21.1vw;
@@ -1300,38 +1326,22 @@ table.nutritional-chart {
     min-height: 11.6875rem;
     max-width: 25.375rem;
     max-height: 21.625rem; }
+    @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+      .bottle.cran-lime {
+        background-image: url("../images/slide1-bottle-cran-lime@2x.png"); } }
     @media (max-width: 768px) {
-      .bottle.honey {
+      .bottle.cran-lime {
         top: 35%;
         left: -4%; } }
     @media (max-width: 680px) {
-      .bottle.honey {
+      .bottle.cran-lime {
         top: 39%;
         left: -6%;
         min-width: 135px;
         min-height: 115px; } }
     @media (max-width: 480px) {
-      .bottle.honey {
+      .bottle.cran-lime {
         display: none; } }
-
-.organic-stamp {
-  position: absolute;
-  z-index: 2;
-  right: 2rem;
-  bottom: 20vh;
-  width: 16.7vw;
-  height: 16.7vw;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
-  max-width: 214px;
-  max-height: 214px;
-  background-image: url("../images/organic-stamp.png");
-  background-size: contain;
-  background-repeat: no-repeat; }
-  @media (max-width: 680px) {
-    .organic-stamp {
-      right: 1rem;
-      bottom: 4vh; } }
 
 .mint-fruit {
   position: absolute;
@@ -1354,15 +1364,52 @@ table.nutritional-chart {
   background-image: url("../images/slide1-bg-lemon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  left: 2%;
-  bottom: 40%;
-  margin: auto;
-  width: 8.1vw;
-  height: 6.3vw;
-  max-width: 9.75rem;
-  max-height: 7.5625rem; }
+  left: 0;
+  top: 35%;
+  width: 7.1354166667vw;
+  min-width: 3.425rem;
+  max-width: 8.5625rem;
+  height: 10.4166666667vw;
+  min-height: 5rem;
+  max-height: 12.5rem; }
   @media (max-width: 680px) {
     .bg-lemon {
+      display: none; } }
+
+.bg-lemon-cran {
+  position: absolute;
+  z-index: 2;
+  background-image: url("../images/slide1-bg-lemon-cran.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 2.2vw;
+  top: 42%;
+  width: 10.6770833333vw;
+  min-width: 5.125rem;
+  max-width: 12.8125rem;
+  height: 10.9375vw;
+  min-height: 5.25rem;
+  max-height: 13.125rem; }
+  @media (max-width: 680px) {
+    .bg-lemon-cran {
+      display: none; } }
+
+.bg-lemon-right {
+  position: absolute;
+  z-index: 2;
+  background-image: url("../images/slide1-bg-lemon-right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  width: 10.3645833333vw;
+  min-width: 4.975rem;
+  max-width: 12.4375rem;
+  height: 8.1770833333vw;
+  min-height: 3.925rem;
+  max-height: 9.8125rem; }
+  @media (max-width: 680px) {
+    .bg-lemon-right {
       display: none; } }
 
 .bg-orange {
@@ -1371,146 +1418,276 @@ table.nutritional-chart {
   background-image: url("../images/slide1-bg-orange.png");
   background-size: contain;
   background-repeat: no-repeat;
-  right: 5%;
-  bottom: 34%;
-  margin: auto;
-  width: 6.9vw;
-  height: 6.9vw;
-  max-width: 8.3125rem;
-  max-height: 8.3125rem; }
+  right: 0;
+  top: 32%;
+  width: 5.7291666667vw;
+  min-width: 2.75rem;
+  max-width: 6.875rem;
+  height: 8.8541666667vw;
+  min-height: 4.25rem;
+  max-height: 10.625rem; }
   @media (max-width: 680px) {
     .bg-orange {
       display: none; } }
 
-.bg-text {
+.landing-clouds-left {
   position: absolute;
-  z-index: 2;
-  right: 18%;
-  bottom: 15vh;
-  width: 37.8vw;
-  height: 28.2vw;
-  min-width: 12.5rem;
-  min-height: 2.75rem;
-  max-width: 30.25rem;
-  max-height: 6.625rem;
-  background-image: url("../images/slide-2-bg-text.png");
+  left: 0;
+  top: -150px;
+  background-image: url("../images/landing-clouds-left.png");
+  background-size: contain auto;
   background-size: contain;
-  background-repeat: no-repeat; }
-  @media (max-width: 680px) {
-    .bg-text {
-      bottom: -20%;
-      left: 0;
-      right: 0;
-      margin: auto; } }
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 51.875vw;
+  min-width: 24.9rem;
+  max-width: 62.25rem;
+  height: 41.1979166667vw;
+  min-height: 19.775rem;
+  max-height: 49.4375rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .landing-clouds-left {
+      background-image: url("../images/landing-clouds-left@2x.png"); } }
 
-.i-love-you {
+.landing-clouds-right {
   position: absolute;
-  z-index: 2;
-  left: 41%;
-  top: 9%;
-  width: 24.8vw;
-  height: 24.8vw;
-  min-width: 9.375rem;
-  min-height: 9.375rem;
-  max-width: 317px;
-  max-height: 317px;
-  background-image: url("../images/i-love-you.png");
-  background-size: contain;
-  background-repeat: no-repeat; }
-  @media (max-width: 680px) {
-    .i-love-you {
-      top: 15%;
-      left: 0; } }
-
-.bottle-cap {
-  position: absolute;
-  z-index: 2;
-  right: 15%;
-  bottom: 8vh;
-  width: 15.8vw;
-  height: 11.5vw;
-  min-width: 7.75rem;
-  min-height: 5.625rem;
-  max-width: 19rem;
-  max-height: 13.8125rem;
-  background-image: url("../images/bottle-cap.png");
-  background-size: contain;
-  background-repeat: no-repeat; }
-  @media (max-width: 680px) {
-    .bottle-cap {
-      right: -2rem;
-      bottom: 5vh; } }
-
-.est-1998 {
-  position: absolute;
-  z-index: 2;
-  right: 8%;
-  bottom: 32vh;
-  width: 5.6vw;
-  height: 5.6vw;
-  min-width: 3.75rem;
-  min-height: 3.75rem;
-  max-width: 6.8125rem;
-  max-height: 6.8125rem;
-  background-image: url("../images/est-1998.png");
-  background-size: contain;
-  background-repeat: no-repeat; }
-  @media (max-width: 680px) {
-    .est-1998 {
-      right: 1rem;
-      bottom: auto;
-      top: 50%; } }
-
-.austin-stamp {
-  position: absolute;
-  z-index: 2;
-  right: 2rem;
-  top: 16vh;
-  width: 13.6vw;
-  height: 13.6vw;
-  min-width: 6.25rem;
-  min-height: 6.25rem;
-  max-width: 174px;
-  max-height: 174px;
-  background-image: url("../images/austin-stamp.png");
-  background-size: contain;
-  background-repeat: no-repeat; }
-  @media (max-width: 680px) {
-    .austin-stamp {
-      right: 1rem;
-      top: 25vh; } }
-
-.cactus {
-  position: absolute;
-  z-index: 2;
   right: 0;
-  bottom: 18vh;
-  width: 14.8vw;
-  height: 29.5vw;
-  min-width: 2.8125rem;
-  min-height: 5.625rem;
-  max-width: 11.8125rem;
-  max-height: 23.625rem;
-  background-image: url("../images/cactus.png");
+  top: 70px;
+  background-image: url("../images/landing-clouds-right.png");
+  background-size: contain auto;
   background-size: contain;
-  background-repeat: no-repeat; }
-  @media (max-width: 680px) {
-    .cactus {
-      right: -2rem; } }
-  .cactus.reverse {
-    transform: scaleX(-1);
-    width: 11.7vw;
-    height: 23.4vw;
-    min-width: 2.1875rem;
-    min-height: 4.375rem;
-    max-width: 9.375rem;
-    max-height: 18.75rem;
-    right: auto !important;
-    left: -1rem;
-    bottom: 11vh; }
-    @media (max-width: 680px) {
-      .cactus.reverse {
-        bottom: 20vh; } }
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 40.8333333333vw;
+  min-width: 19.6rem;
+  max-width: 49rem;
+  height: 30.2083333333vw;
+  min-height: 14.5rem;
+  max-height: 36.25rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .landing-clouds-right {
+      background-image: url("../images/landing-clouds-right@2x.png"); } }
+
+.landing-clouds-right {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  background-image: url("../images/landing-clouds-right.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 40.8333333333vw;
+  min-width: 19.6rem;
+  max-width: 49rem;
+  height: 30.2083333333vw;
+  min-height: 14.5rem;
+  max-height: 36.25rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .landing-clouds-right {
+      background-image: url("../images/landing-clouds-right@2x.png"); } }
+
+.mimi-clouds-left {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  background-image: url("../images/mimi-clouds-left.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 42.1875vw;
+  min-width: 20.25rem;
+  max-width: 50.625rem;
+  height: 41.8229166667vw;
+  min-height: 20.075rem;
+  max-height: 50.1875rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .mimi-clouds-left {
+      background-image: url("../images/mimi-clouds-left@2x.png"); } }
+
+.mimi-clouds-right {
+  position: absolute;
+  right: 0;
+  top: 300px;
+  background-image: url("../images/mimi-clouds-right.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 19.1145833333vw;
+  min-width: 9.175rem;
+  max-width: 22.9375rem;
+  height: 33.3854166667vw;
+  min-height: 16.025rem;
+  max-height: 40.0625rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .mimi-clouds-right {
+      background-image: url("../images/mimi-clouds-right@2x.png"); } }
+
+.mimi-left-lem-blueberry {
+  position: absolute;
+  left: 0;
+  top: 400px;
+  background-image: url("../images/mimi-side-left-lem-blueberry.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 5.2083333333vw;
+  min-width: 3.125rem;
+  max-width: 6.25rem;
+  height: 19.84375vw;
+  min-height: 11.90625rem;
+  max-height: 23.8125rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .mimi-left-lem-blueberry {
+      background-image: url("../images/mimi-side-left-lem-blueberry@2x.png"); } }
+  @media (max-width: 1020px) {
+    .mimi-left-lem-blueberry {
+      top: 530px; } }
+  @media (max-width: 768px) {
+    .mimi-left-lem-blueberry {
+      display: none; } }
+
+.mimi-left-pom-lem-orange {
+  position: absolute;
+  left: 4vw;
+  bottom: 200px;
+  background-image: url("../images/mimi-side-left-pom-lem-orange.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 11.6145833333vw;
+  min-width: 6.96875rem;
+  max-width: 13.9375rem;
+  height: 24.4270833333vw;
+  min-height: 14.65625rem;
+  max-height: 29.3125rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .mimi-left-pom-lem-orange {
+      background-image: url("../images/mimi-side-left-pom-lem-orange@2x.png"); } }
+  @media (max-width: 1020px) {
+    .mimi-left-pom-lem-orange {
+      bottom: 300px; } }
+  @media (max-width: 768px) {
+    .mimi-left-pom-lem-orange {
+      display: none; } }
+
+.mimi-right-lime-mango {
+  position: absolute;
+  right: 4vw;
+  bottom: 100px;
+  background-image: url("../images/mimi-side-right-lime-mango.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 10.2604166667vw;
+  min-width: 6.15625rem;
+  max-width: 12.3125rem;
+  height: 23.9583333333vw;
+  min-height: 14.375rem;
+  max-height: 28.75rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .mimi-right-lime-mango {
+      background-image: url("../images/mimi-side-right-lime-mango@2x.png"); } }
+  @media (max-width: 1020px) {
+    .mimi-right-lime-mango {
+      bottom: 0px; } }
+  @media (max-width: 768px) {
+    .mimi-right-lime-mango {
+      display: none; } }
+
+.mimi-right-orange-cran {
+  position: absolute;
+  right: 1vw;
+  top: 400px;
+  background-image: url("../images/mimi-side-right-orange-cran.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 6.4583333333vw;
+  min-width: 3.875rem;
+  max-width: 7.75rem;
+  height: 16.5625vw;
+  min-height: 9.9375rem;
+  max-height: 19.875rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .mimi-right-orange-cran {
+      background-image: url("../images/mimi-side-right-orange-cran@2x.png"); } }
+  @media (max-width: 1020px) {
+    .mimi-right-orange-cran {
+      top: 600px; } }
+  @media (max-width: 768px) {
+    .mimi-right-orange-cran {
+      display: none; } }
+
+.ingredients-clouds-left {
+  position: absolute;
+  left: 0;
+  top: 550px;
+  background-image: url("../images/ingredients-clouds-left.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 7.7083333333vw;
+  min-width: 3.7rem;
+  max-width: 9.25rem;
+  height: 6.71875vw;
+  min-height: 3.225rem;
+  max-height: 8.0625rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .ingredients-clouds-left {
+      background-image: url("../images/ingredients-clouds-left@2x.png"); } }
+
+.ingredients-clouds-right {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background-image: url("../images/ingredients-clouds-right.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 49.0625vw;
+  min-width: 23.55rem;
+  max-width: 58.875rem;
+  height: 48.0729166667vw;
+  min-height: 23.075rem;
+  max-height: 57.6875rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .ingredients-clouds-right {
+      background-image: url("../images/ingredients-clouds-right@2x.png"); } }
+
+.ingredients-right-lem {
+  position: absolute;
+  right: 0;
+  bottom: 200px;
+  z-index: 1;
+  background-image: url("../images/ingredients-side-right-lem.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 15.3645833333vw;
+  min-width: 9.21875rem;
+  max-width: 18.4375rem;
+  height: 14.1145833333vw;
+  min-height: 8.46875rem;
+  max-height: 16.9375rem; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .ingredients-right-lem {
+      background-image: url("../images/ingredients-side-right-lem@2x.png"); } }
+  @media (max-width: 1020px) {
+    .ingredients-right-lem {
+      bottom: 100px; } }
+  @media (max-width: 768px) {
+    .ingredients-right-lem {
+      display: none; } }
 
 .product-clouds-left {
   position: absolute;
