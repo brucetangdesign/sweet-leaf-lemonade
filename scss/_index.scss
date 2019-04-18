@@ -1132,7 +1132,7 @@ table.nutritional-chart{
   top: 400px;
   @include background-2x( '../images/products-side-left-blue-mango', 'png', contain, auto, left top, no-repeat );
 
-  @include size-to-screen-width(186,374,0.5);
+  @include size-to-screen-width(186,374,0.3);
 
   @include breakpoint(m){
     top: 535px;
@@ -1149,7 +1149,7 @@ table.nutritional-chart{
   top: 440px;
   @include background-2x( '../images/products-side-left-pom-lem-lime', 'png', contain, auto, left top, no-repeat );
 
-  @include size-to-screen-width(218,564,0.5);
+  @include size-to-screen-width(218,564,0.3);
 
   @include breakpoint(m){
     top: 525px;
@@ -1167,7 +1167,7 @@ table.nutritional-chart{
   z-index: 1;
   @include background-2x( '../images/products-side-right-lem-lime', 'png', contain, auto, left top, no-repeat );
 
-  @include size-to-screen-width(230,386,0.5);
+  @include size-to-screen-width(230,386,0.3);
 
   @include breakpoint(m){
     top: 535px;
@@ -1185,7 +1185,7 @@ table.nutritional-chart{
   z-index: 1;
   @include background-2x( '../images/products-side-right-cran-orange', 'png', contain, auto, left top, no-repeat );
 
-  @include size-to-screen-width(275,523,0.5);
+  @include size-to-screen-width(275,523,0.3);
 
   @include breakpoint(m){
     top: 555px;
@@ -1199,4 +1199,24 @@ table.nutritional-chart{
 .center{
   position: absolute;
   top: 50%;
+}
+
+#airplane{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -5vw;
+  left: 0;
+  position: absolute;
+  transform-origin: top;
+
+  @include breakpoint(xs-680){
+    display: none;
+  }
+
+  > div{
+    transform: translateX(-50%) !important;
+    -webkit-transform: translateX(-50%) !important;
+    left: 50% !important;
+  }
 }

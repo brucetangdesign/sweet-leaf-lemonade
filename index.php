@@ -12,6 +12,7 @@ $page = "home-page";
   <head>
     <?php include 'head.php'; ?>
     <script src="js/isInView.js"></script>
+    <script src="js/lottie.min.js"></script>
     <script src="js/sweetleaf.js"></script>
   </head>
 
@@ -89,6 +90,7 @@ $page = "home-page";
     <section class="slide-main slide1">
       <div class="landing-clouds-left rellax" data-rellax-speed="-6"></div>
       <div class="landing-clouds-right rellax" data-rellax-speed="-4"></div>
+      <div id="airplane"></div>
       <div class="bottle orange-mango rellax" data-rellax-speed="-5"></div>
       <div class="bg-lemon rellax" data-rellax-speed="1"></div>
       <div class="bg-orange rellax" data-rellax-speed="3"></div>
