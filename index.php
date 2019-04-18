@@ -2,8 +2,8 @@
 
 <?php
 //Page title
-$pageTitle = "Organic tea recipes made from simple ingredients available in original, semisweet and unsweet Teas | Sweet Leaf Tea Co.";
-$meta_description = "Sweet Leaf Tea is organic, made from simple ingredients like real cane sugar and available in original, semisweet and unsweet teas. Sweet but not too sweet.";
+$pageTitle = "Organic lemonade with an attitude made from simple ingredients you can pronounce | Sweet Leaf Tea Co.";
+$meta_description = "Sweet Leaf Tea organic lemonades are available in Cranberry Lime, Orange Mango, Pomegranate Blueberry, and Classic Lemonade. Sweet but not too sweet.";
 $footerClass="fixed";
 $page = "home-page";
 ?>
@@ -151,7 +151,7 @@ $page = "home-page";
       <div class="product-right-cran-orange rellax" data-rellax-speed="4"></div>
       <div class="product-clouds-right rellax" data-rellax-speed="3"></div>
       <div class="about-products-main">
-        <h1>FPO Our famous organic lemonade recipes for y’all and all y’alls taste.</h1>
+        <h1>What's both sour and sweet all at once? Our new organic lemonades for y'all and y'alls taste.</h1>
         <p class="subtitle">Fpo lorem ipsum dolor ingredients copy lorem ipsum dolor copy. Fpo lorem ipsum dolor ingredients copy ipsum.</p>
         <div class="about-products-main-image"></div>
         <div class="center"></div>
