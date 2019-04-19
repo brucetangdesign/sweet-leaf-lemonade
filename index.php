@@ -17,56 +17,31 @@ $page = "home-page";
   </head>
 
   <body id="<?php echo $page; ?>">
-  <!-- Google Tag Manager -->
-	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FLPC"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-P9FLPC');</script>
-	<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+  	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FLPC"
+  	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  	})(window,document,'script','dataLayer','GTM-P9FLPC');</script>
+  	<!-- End Google Tag Manager -->
 
-	<!-- Start of DoubleClick Floodlight Tag: Please do not remove -->
-	<script type="text/javascript">
-	var axel = Math.random() + "";
-	var a = axel * 10000000000000;
-	document.write('<iframe src="http://2275258.fls.doubleclick.net/activityi;src=2275258;type=homep670;cat=sweet0;ord=1;num=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
-	</script>
-	<noscript>
-	<iframe src="http://2275258.fls.doubleclick.net/activityi;src=2275258;type=homep670;cat=sweet0;ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
-	</noscript>
-	<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
-	<!-- Code for Action: Mirum Sweet Leaf Tea - Homepage - Landing -->
-	<!-- Begin Sizmek DSP Conversion Action Tracking Code Version 9 -->
-	<script type='text/javascript'>
-	(function() {
-		var w = window, d = document;
-		var s = d.createElement('script');
-		s.setAttribute('async', 'true');
-		s.setAttribute('type', 'text/javascript');
-		s.setAttribute('src', '//c1.rfihub.net/js/tc.min.js');
-		var f = d.getElementsByTagName('script')[0];
-		f.parentNode.insertBefore(s, f);
-		if (typeof w['_rfi'] !== 'function') {
-			w['_rfi']=function() {
-				w['_rfi'].commands = w['_rfi'].commands || [];
-				w['_rfi'].commands.push(arguments);
-			};
-		}
-		_rfi('setArgs', 'ver', '9');
-		_rfi('setArgs', 'rb', '34369');
-		_rfi('setArgs', 'ca', '20808024');
-		_rfi('setArgs', '_o', '34369');
-		_rfi('setArgs', '_t', '20808024');
-		_rfi('track');
-	})();
-	</script>
-	<noscript>
-	  <iframe src='//20808024p.rfihub.com/ca.html?rb=34369&ca=20808024&_o=34369&_t=20808024&ra=<?php echo(rand(1000,1000000)); ?>' style='display:none;padding:0;margin:0' width='0' height='0'>
-	</iframe>
-	</noscript>
-	<!-- End Sizmek DSP Conversion Action Tracking Code Version 9 -->
+    <!-- Mirum Sweet Leaf Tea - Lemonade - Landing -->
+	 <!-- OwnerIQ Analytics tag -->
+    <!-- Sweet Leaf Tea - Analytics -->
+    <script type="text/javascript">
+    window._oiqq = window._oiqq || [];
+    _oiqq.push(['oiq_addPageLifecycle', 'e3c7']);
+    _oiqq.push(['oiq_doTag']);
+    (function() {
+    var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+    oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/554pnr.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+    })();
+    </script>
+    <!-- End OwnerIQ tag -->
+
     <?php include 'header.php'; ?>
     <!-- Backgrounds -->
     <section id="bg">
@@ -154,7 +129,7 @@ $page = "home-page";
       <div class="product-clouds-right rellax" data-rellax-speed="3"></div>
       <div class="about-products-main">
         <h1>What's both sour and sweet all at once? Our new organic lemonades for y'all and y'alls taste.</h1>
-        <p class="subtitle">Fpo lorem ipsum dolor ingredients copy lorem ipsum dolor copy. Fpo lorem ipsum dolor ingredients copy ipsum.</p>
+        <p class="subtitle">Just like Sweet Leaf Organic Iced Teas, our Lemonades are made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar, along with a whole lotta love. Try one of our four flavors today! Sweet but not too sweet.</p>
         <div class="about-products-main-image"></div>
         <div class="center"></div>
       </div>
