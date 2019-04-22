@@ -757,10 +757,14 @@ footer {
     @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
       .slide1 .slide-image {
         background-image: url("../images/slide1-bottle-classic@2x.png"); } }
+    @media (max-width: 768px) {
+      .slide1 .slide-image {
+        margin-left: 21vw; } }
     @media (max-width: 480px) {
       .slide1 .slide-image {
-        min-width: 280px;
-        min-height: 384px; } }
+        min-width: 250px;
+        min-height: 384px;
+        margin-left: 37vw; } }
   .slide3 .slide-image {
     max-width: 835px;
     background-image: url("../images/slide-ingredients.png");
@@ -862,7 +866,9 @@ footer {
     margin-right: auto;
     margin-bottom: 1.5rem; }
   #about-products.slide-main p {
-    max-width: 800px; }
+    max-width: 800px;
+    margin-top: 2rem;
+    margin-bottom: 0; }
   #about-products.slide-main ul {
     font-family: "Vision Heavy";
     font-size: 2.5rem;
@@ -1204,16 +1210,16 @@ table.nutritional-chart {
     @media (max-width: 768px) {
       .bottle.pom-blueberry {
         top: 46%;
-        left: 9%; } }
+        left: 6%; } }
     @media (max-width: 680px) {
       .bottle.pom-blueberry {
         min-width: 165px;
         min-height: 186px;
-        top: 48%;
         left: 4%; } }
     @media (max-width: 480px) {
       .bottle.pom-blueberry {
-        left: 3%; } }
+        top: 290px;
+        left: -40px; } }
   .bottle.orange-mango {
     background-image: url("../images/slide1-bottle-orange-mango.png");
     background-size: contain auto;
@@ -1240,7 +1246,7 @@ table.nutritional-chart {
     @media (max-width: 768px) {
       .bottle.orange-mango {
         top: 41%;
-        right: 3%;
+        right: 0;
         transform: none !important;
         -webkit-transform: none !important;
         min-width: 133px;
@@ -1326,7 +1332,7 @@ table.nutritional-chart {
   height: 10.9375vw;
   min-height: 5.25rem;
   max-height: 13.125rem; }
-  @media (max-width: 680px) {
+  @media (max-width: 768px) {
     .bg-lemon-cran {
       display: none; } }
 
@@ -1496,10 +1502,10 @@ table.nutritional-chart {
   background-position: left top;
   background-repeat: no-repeat;
   width: 11.6145833333vw;
-  min-width: 6.96875rem;
+  min-width: 4.18125rem;
   max-width: 13.9375rem;
   height: 24.4270833333vw;
-  min-height: 14.65625rem;
+  min-height: 8.79375rem;
   max-height: 29.3125rem; }
   @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
     .mimi-left-pom-lem-orange {
@@ -1509,7 +1515,10 @@ table.nutritional-chart {
       bottom: 300px; } }
   @media (max-width: 768px) {
     .mimi-left-pom-lem-orange {
-      display: none; } }
+      transform: none !important;
+      -webkit-transform: none !important;
+      bottom: -120px;
+      left: 10%; } }
 
 .mimi-right-lime-mango {
   position: absolute;
@@ -1559,7 +1568,11 @@ table.nutritional-chart {
       top: 600px; } }
   @media (max-width: 768px) {
     .mimi-right-orange-cran {
-      display: none; } }
+      transform: none !important;
+      -webkit-transform: none !important;
+      top: auto;
+      bottom: -100px;
+      right: 1vw; } }
 
 .ingredients-clouds-left {
   position: absolute;
@@ -1686,7 +1699,14 @@ table.nutritional-chart {
       top: 535px; } }
   @media (max-width: 768px) {
     .product-left-blue-mango {
-      display: none; } }
+      transform: none !important;
+      -webkit-transform: none !important;
+      top: -200px;
+      left: 5%; } }
+  @media (max-width: 680px) {
+    .product-left-blue-mango {
+      top: -108px;
+      left: 35%; } }
 
 .product-left-pom-lem-lime {
   position: absolute;
@@ -1737,7 +1757,12 @@ table.nutritional-chart {
       top: 535px; } }
   @media (max-width: 768px) {
     .product-right-lem-lime {
-      display: none; } }
+      transform: none !important;
+      -webkit-transform: none !important;
+      top: -150px; } }
+  @media (max-width: 680px) {
+    .product-right-lem-lime {
+      top: -100px; } }
 
 .product-right-cran-orange {
   position: absolute;
@@ -1773,7 +1798,7 @@ table.nutritional-chart {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -5vw;
+  top: -5%;
   left: 0;
   position: absolute;
   transform-origin: top; }

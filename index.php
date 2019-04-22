@@ -128,9 +128,9 @@ $page = "home-page";
       <div class="product-right-cran-orange rellax" data-rellax-speed="4"></div>
       <div class="product-clouds-right rellax" data-rellax-speed="3"></div>
       <div class="about-products-main">
-        <h1>What's both sour and sweet all at once? Our new organic lemonades for y'all and y'alls taste.</h1>
-        <p class="subtitle">Just like Sweet Leaf Organic Iced Teas, our Lemonades are made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar, along with a whole lotta love. Try one of our four flavors today! Sweet but not too sweet.</p>
+        <h1>What's both sour and sweet all at once? Our new organic lemonades created exclusively for y'alls tastebuds.</h1>
         <div class="about-products-main-image"></div>
+        <p class="subtitle">Just like Sweet Leaf Organic Iced Teas, our Lemonades are made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar, along with a whole lotta love. Try one of our four flavors today! Sweet but not too sweet.</p>
         <div class="center"></div>
       </div>
       <div class="product-chart">
