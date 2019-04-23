@@ -173,6 +173,9 @@
   padding-top: 0;
   padding-bottom: 0;
 
+  @include breakpoint(m-s-up){
+      margin-bottom: 1rem;
+  }
 
   @include breakpoint(xs-680){
     margin-bottom: 3rem;
@@ -1040,7 +1043,7 @@ table.nutritional-chart{
 .mimi-left-pom-lem-orange{
   position: absolute;
   left: 4vw;
-  bottom: 200px;
+  bottom: 40px;
   @include background-2x( '../images/mimi-side-left-pom-lem-orange', 'png', contain, auto, left top, no-repeat );
 
   @include size-to-screen-width(223,469,0.3);
@@ -1071,8 +1074,8 @@ table.nutritional-chart{
 
 .mimi-right-lime-mango{
   position: absolute;
-  right: 4vw;
-  bottom: 100px;
+  right: 3vw;
+  bottom: 0px;
   @include background-2x( '../images/mimi-side-right-lime-mango', 'png', contain, auto, left top, no-repeat );
 
   @include size-to-screen-width(197,460,0.5);

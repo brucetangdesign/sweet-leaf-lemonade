@@ -787,6 +787,11 @@ footer li i {
   padding-top: 0;
   padding-bottom: 0;
 }
+@media (min-width: 961px) {
+  .slide-main {
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 680px) {
   .slide-main {
     margin-bottom: 3rem;
@@ -1915,7 +1920,7 @@ table.nutritional-chart td span.chart-flavor:after {
 .mimi-left-pom-lem-orange {
   position: absolute;
   left: 4vw;
-  bottom: 200px;
+  bottom: 40px;
   background-image: url("../images/mimi-side-left-pom-lem-orange.png");
   background-size: contain auto;
   background-size: contain;
@@ -1968,8 +1973,8 @@ table.nutritional-chart td span.chart-flavor:after {
 
 .mimi-right-lime-mango {
   position: absolute;
-  right: 4vw;
-  bottom: 100px;
+  right: 3vw;
+  bottom: 0px;
   background-image: url("../images/mimi-side-right-lime-mango.png");
   background-size: contain auto;
   background-size: contain;
