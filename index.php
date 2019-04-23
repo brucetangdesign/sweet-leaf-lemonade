@@ -80,7 +80,7 @@ $page = "home-page";
         </div>
         <div class="slide-copy" data-rellax-speed="3">
           <h1 class="h1-sans">Bless Your<span class="larger-line">Tastebuds</span></h1>
-          <p class="subtitle">Lorem ipsum. Now available in New York!</p>
+          <p class="subtitle">Organic Sweet Leaf Lemonade has arrived! Now available in New York!</p>
         </div>
       </div>
     </section>
@@ -98,8 +98,8 @@ $page = "home-page";
           <div class="slide-image"></div>
         </div>
         <div class="slide-copy rellax" data-rellax-speed="-2">
-          <h1>What's both sourand sweet all at once?</h1>
-          <p class="subtitle">No, not me! My new lemonades! Growing up in Austin, we always grew the finest fruit with the sweetest juice that we'd pour over ice to get us through those summer days.<br><br>And don't worry... just like my Organic Iced Teas, you'll still find the same love in every bottle, and only ingredients that you can pronounce, like organic lemon juice and organic cane sugar. You know me, I like keeping things sweet and simple.</p>
+          <h1>Organic from day one! We wouldn't make our Lemonades any other way!</h1>
+          <p class="subtitle">Made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar and a whole lotta love to top it off.</p>
         </div>
       </div>
     </section>
@@ -114,8 +114,8 @@ $page = "home-page";
           <div class="slide-image"></div>
         </div>
         <div class="slide-copy rellax" data-rellax-speed="2">
-          <h1>Lorem ipsum dolor ingredients section</h1>
-          <p class="subtitle">Fpo lorem ipsum dolor ingredients copy lorem ipsum dolor ingredients copy. Fpo lorem ipsum dolor ingredients copy lorem ipsum dolor ingredients copy lorem ipsum.</p>
+          <h1>Organic lemonades created exclusively for y'alls taste buds.</h1>
+          <p class="subtitle">From a classic favorite to lemonades packed with an attitude, try one of four flavors today! Keep it Organic. Keep it Real.</p>
         </div>
       </div>
     </section>

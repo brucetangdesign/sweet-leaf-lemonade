@@ -327,13 +327,15 @@
     }
 
     @include breakpoint(xs-680){
-      background-position: bottom;
+      //background-position: bottom;
       background-size: contain !important;
     }
   }
 
   .slide2 &{
-    max-width: 600px;
+    @include breakpoint(xs-680-up){
+      @include size-to-screen-width(585,614,0.8);
+    }
     @include background-2x( '../images/slide-mimi', 'png', contain, auto, center, no-repeat );
   }
 
@@ -405,9 +407,12 @@
   display: block;
   width: 100%;
   margin-left: auto;
-  //margin-bottom: 3rem;
   height: auto;
   text-align: center;
+
+  @include breakpoint(xs-680-up){
+    margin-bottom: 11rem;
+  }
 
   h1{
     color: $sl-brown;
@@ -1019,8 +1024,12 @@ table.nutritional-chart{
 
   @include size-to-screen-width(100,381,0.5);
 
+  @include breakpoint(m-l){
+    top: 434px;
+  }
+
   @include breakpoint(m){
-    top: 530px;
+    top: 170px;
   }
 
   @include breakpoint(s){
@@ -1036,16 +1045,27 @@ table.nutritional-chart{
 
   @include size-to-screen-width(223,469,0.3);
 
+  @include breakpoint(m-l){
+    left: 1vw;
+    bottom: auto;
+    top: 475px;
+  }
+
   @include breakpoint(m){
-    bottom: 300px;
+    top: 575px;
   }
 
   @include breakpoint(s){
-    //display: none;
+    @include size-to-screen-width(223,469,0.7);
     transform: none !important;
     -webkit-transform: none !important;
+    top: auto;
     bottom: -120px;
     left: 10%;
+  }
+
+  @include breakpoint(xs-680){
+    display: none;
   }
 }
 
@@ -1056,6 +1076,11 @@ table.nutritional-chart{
   @include background-2x( '../images/mimi-side-right-lime-mango', 'png', contain, auto, left top, no-repeat );
 
   @include size-to-screen-width(197,460,0.5);
+
+  @include breakpoint(l){
+    right: -20px;
+    bottom: -100px;
+  }
 
   @include breakpoint(m){
     bottom: 0px;
@@ -1074,16 +1099,26 @@ table.nutritional-chart{
 
   @include size-to-screen-width(124,318,0.5);
 
+  @include breakpoint(l){
+    right: -40px;
+    top: 180px;
+  }
+
   @include breakpoint(m){
     top: 600px;
   }
 
   @include breakpoint(s){
+    @include size-to-screen-width(124,318,0.9);
     transform: none !important;
     -webkit-transform: none !important;
     top: auto;
-    bottom: -100px;
-    right: 1vw;
+    bottom: -260px;
+    right: 30%;
+  }
+
+  @include breakpoint(xs-680){
+    display: none;
   }
 }
 
@@ -1108,14 +1143,14 @@ table.nutritional-chart{
 .ingredients-right-lem{
   position: absolute;
   right: 0;
-  bottom: 200px;
+  bottom: 100px;
   z-index: 1;
   @include background-2x( '../images/ingredients-side-right-lem', 'png', contain, auto, left top, no-repeat );
 
   @include size-to-screen-width(295,271,0.5);
 
-  @include breakpoint(m){
-    bottom: 100px;
+  @include breakpoint(l){
+    bottom: 60px;
   }
 
   @include breakpoint(s){
@@ -1240,6 +1275,14 @@ table.nutritional-chart{
   left: 0;
   position: absolute;
   transform-origin: top;
+
+  @include breakpoint(m){
+    margin-left: 100px;
+  }
+
+  @include breakpoint(s){
+    margin-left: 40px;
+  }
 
   @include breakpoint(xs-680){
     display: none;
