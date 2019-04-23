@@ -86,7 +86,7 @@ $page = "home-page";
           </div>
         </div>
         <div class="slide-copy" data-rellax-speed="3">
-          <h1 class="h1-sans">Bless Your<span class="larger-line">Tastebuds</span></h1>
+          <h1 class="h1-sans">Bless Your<span class="larger-line">Taste buds</span></h1>
           <p class="subtitle">Organic Sweet Leaf Lemonade has arrived! Now available in New York!</p>
         </div>
       </div>
