@@ -924,15 +924,18 @@ table.nutritional-chart{
   }
 
   &.pom-blueberry{
-    @include background-2x( '../images/slide1-bottle-classic-mobile', 'png', contain, auto, center top, no-repeat );
-  }
-
-  &.cran-lime{
-    @include background-2x( '../images/slide1-bottle-classic-mobile', 'png', contain, auto, center top, no-repeat );
+    display: none;
+    @include background-2x( '../images/slide1-bottle-pom-blueberry-mobile', 'png', contain, auto, center top, no-repeat );
   }
 
   &.orange-mango{
-    @include background-2x( '../images/slide1-bottle-classic-mobile', 'png', contain, auto, center top, no-repeat );
+    display: none;
+    @include background-2x( '../images/slide1-bottle-orange-mango-mobile', 'png', contain, auto, center top, no-repeat );
+  }
+
+  &.cran-lime{
+    display: none;
+    @include background-2x( '../images/slide1-bottle-cran-lime-mobile', 'png', contain, auto, center top, no-repeat );
   }
 }
 
