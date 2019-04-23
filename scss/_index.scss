@@ -280,6 +280,10 @@
   .slide1 &{
     @include prefixr(justify-content,center);
   }
+
+  .slide2 &{
+    @include prefixr(justify-content,flex-end);
+  }
 }
 
 .slide-image{
@@ -342,6 +346,7 @@
   .slide2 &{
     @include breakpoint(xs-680-up){
       @include size-to-screen-width(585,614,0.8);
+      min-width: 100% !important;
     }
     @include background-2x( '../images/slide-mimi', 'png', contain, auto, center, no-repeat );
   }
@@ -988,6 +993,21 @@ table.nutritional-chart{
   }
 }
 
+.bg-lemon-whole-left{
+  position: absolute;
+  z-index: 2;
+  background-image: url('../images/slide1-bg-lemon-whole-left.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 100px;
+  @include size-to-screen-width(207,288,0.4);
+
+  @include breakpoint(xs-680){
+    display: none;
+  }
+}
+
 .bg-lemon-right{
   position: absolute;
   z-index: 2;
@@ -1119,15 +1139,15 @@ table.nutritional-chart{
 
 .mimi-right-lime-mango{
   position: absolute;
-  right: 3vw;
-  bottom: 0px;
+  right: -2vw;
+  bottom: -100px;
   @include background-2x( '../images/mimi-side-right-lime-mango', 'png', contain, auto, left top, no-repeat );
 
   @include size-to-screen-width(197,460,0.5);
 
-  @include breakpoint(l){
-    right: -20px;
-    bottom: -100px;
+  @media (min-width: 1870px) {
+    right: 3vw;
+    bottom: 0px;
   }
 
   @include breakpoint(m){
@@ -1141,11 +1161,16 @@ table.nutritional-chart{
 
 .mimi-right-orange-cran{
   position: absolute;
-  right: 1vw;
-  top: 400px;
+  right: -1vw;
+  top: 310px;
   @include background-2x( '../images/mimi-side-right-orange-cran', 'png', contain, auto, left top, no-repeat );
 
   @include size-to-screen-width(124,318,0.5);
+
+  @media (min-width: 1870px) {
+    right: 1vw;
+    top: 400px;
+  }
 
   @include breakpoint(l){
     right: -40px;

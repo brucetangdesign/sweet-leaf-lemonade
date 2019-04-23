@@ -70,6 +70,7 @@ $page = "home-page";
       <div class="bg-lemon rellax" data-rellax-speed="1"></div>
       <div class="bg-orange rellax" data-rellax-speed="3"></div>
       <div class="bg-lemon-cran rellax" data-rellax-speed="-2"></div>
+      <div class="bg-lemon-whole-left rellax" data-rellax-speed="-3"></div>
       <div class="bg-lemon-right rellax" data-rellax-speed="-4"></div>
       <div class="bottle cran-lime rellax"></div>
       <div class="bottle pom-blueberry rellax" data-rellax-speed="1"></div>
@@ -104,8 +105,8 @@ $page = "home-page";
           <div class="slide-image"></div>
         </div>
         <div class="slide-copy rellax" data-rellax-speed="-2">
-          <h1>Organic from day one! We wouldn't make our Lemonades any other way!</h1>
-          <p class="subtitle">Made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar and a whole lotta love to top it off.</p>
+          <h1>What's both sour and sweet all at once?</h1>
+          <p class="subtitle">No, not me! My new lemonades! Growing up in Austin, we always grew the finest fruit with the sweetest juice that we'd pour over ice to get us through those summer days.<br><br>And don't worry... just like my Organic Iced Teas, you'll still find the same love in every bottle, and only ingredients that you can pronounce, like organic lemon juice and organic cane sugar. You know me, I like keeping things sweet and simple.</p>
         </div>
       </div>
     </section>
@@ -120,8 +121,8 @@ $page = "home-page";
           <div class="slide-image"></div>
         </div>
         <div class="slide-copy rellax" data-rellax-speed="2">
-          <h1>Organic lemonades created exclusively for y'alls taste buds.</h1>
-          <p class="subtitle">From a classic favorite to lemonades packed with an attitude, try one of four flavors today! Keep it Organic. Keep it Real.</p>
+          <h1>Organic from day one! We wouldn't make our Lemonades any other way!</h1>
+          <p class="subtitle">Made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar and a whole lotta love to top it off.</p>
         </div>
       </div>
     </section>
@@ -134,9 +135,9 @@ $page = "home-page";
       <div class="product-right-cran-orange rellax" data-rellax-speed="4"></div>
       <div class="product-clouds-right rellax" data-rellax-speed="3"></div>
       <div class="about-products-main">
-        <h1>What's both sour and sweet all at once? Our new organic lemonades created exclusively for y'alls tastebuds.</h1>
+        <h1>Organic lemonades created exclusively for y'alls taste buds.</h1>
         <div class="about-products-main-image"></div>
-        <p class="subtitle">Just like Sweet Leaf Organic Iced Teas, our Lemonades are made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar, along with a whole lotta love. Try one of our four flavors today! Sweet but not too sweet.</p>
+        <p class="subtitle">From a classic favorite to lemonades packed with an attitude, try one of four flavors today! Keep it Organic. Keep it Real.</p>
         <div class="center"></div>
       </div>
       <div class="product-chart">

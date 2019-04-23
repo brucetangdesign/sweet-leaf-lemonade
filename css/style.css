@@ -937,6 +937,13 @@ footer li i {
   -o-justify-content: center;
   justify-content: center;
 }
+.slide2 .slide-image-container {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+}
 
 .slide-image {
   position: relative;
@@ -1039,6 +1046,7 @@ footer li i {
     height: 31.9791666667vw;
     min-height: 30.7rem;
     max-height: 38.375rem;
+    min-width: 100% !important;
   }
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
@@ -1809,6 +1817,27 @@ table.nutritional-chart td span.chart-flavor:after {
   }
 }
 
+.bg-lemon-whole-left {
+  position: absolute;
+  z-index: 2;
+  background-image: url("../images/slide1-bg-lemon-whole-left.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 100px;
+  width: 10.78125vw;
+  min-width: 5.175rem;
+  max-width: 12.9375rem;
+  height: 15vw;
+  min-height: 7.2rem;
+  max-height: 18rem;
+}
+@media (max-width: 680px) {
+  .bg-lemon-whole-left {
+    display: none;
+  }
+}
+
 .bg-lemon-right {
   position: absolute;
   z-index: 2;
@@ -2054,8 +2083,8 @@ table.nutritional-chart td span.chart-flavor:after {
 
 .mimi-right-lime-mango {
   position: absolute;
-  right: 3vw;
-  bottom: 0px;
+  right: -2vw;
+  bottom: -100px;
   background-image: url("../images/mimi-side-right-lime-mango.png");
   background-size: contain auto;
   background-size: contain;
@@ -2073,10 +2102,10 @@ table.nutritional-chart td span.chart-flavor:after {
     background-image: url("../images/mimi-side-right-lime-mango@2x.png");
   }
 }
-@media (max-width: 1280px) {
+@media (min-width: 1870px) {
   .mimi-right-lime-mango {
-    right: -20px;
-    bottom: -100px;
+    right: 3vw;
+    bottom: 0px;
   }
 }
 @media (max-width: 1020px) {
@@ -2092,8 +2121,8 @@ table.nutritional-chart td span.chart-flavor:after {
 
 .mimi-right-orange-cran {
   position: absolute;
-  right: 1vw;
-  top: 400px;
+  right: -1vw;
+  top: 310px;
   background-image: url("../images/mimi-side-right-orange-cran.png");
   background-size: contain auto;
   background-size: contain;
@@ -2109,6 +2138,12 @@ table.nutritional-chart td span.chart-flavor:after {
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
   .mimi-right-orange-cran {
     background-image: url("../images/mimi-side-right-orange-cran@2x.png");
+  }
+}
+@media (min-width: 1870px) {
+  .mimi-right-orange-cran {
+    right: 1vw;
+    top: 400px;
   }
 }
 @media (max-width: 1280px) {
