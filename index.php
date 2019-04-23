@@ -77,6 +77,12 @@ $page = "home-page";
       <div class="slide-content">
         <div class="slide-image-container" data-rellax-speed="3">
           <div class="slide-image"></div>
+          <div class="bottles-mobile">
+            <div class="mobile-bottle classic"></div>
+            <div class="mobile-bottle pom-blueberry hidden"></div>
+            <div class="mobile-bottle cran-lime hidden"></div>
+            <div class="mobile-bottle orange-mango hidden"></div>
+          </div>
         </div>
         <div class="slide-copy" data-rellax-speed="3">
           <h1 class="h1-sans">Bless Your<span class="larger-line">Tastebuds</span></h1>

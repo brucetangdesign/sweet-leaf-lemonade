@@ -979,6 +979,11 @@ footer li i {
     margin-left: 21vw;
   }
 }
+@media (max-width: 680px) {
+  .slide1 .slide-image {
+    opacity: 0;
+  }
+}
 @media (max-width: 480px) {
   .slide1 .slide-image {
     min-width: 250px;
@@ -1539,6 +1544,11 @@ table.nutritional-chart td span.chart-flavor:after {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (max-width: 680px) {
+  .bottle {
+    display: none;
+  }
+}
 .bottle.pom-blueberry {
   background-image: url("../images/slide1-bottle-pom-blueberry.png");
   background-size: contain auto;
@@ -1665,6 +1675,74 @@ table.nutritional-chart td span.chart-flavor:after {
 @media (max-width: 480px) {
   .bottle.cran-lime {
     display: none;
+  }
+}
+
+.bottles-mobile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 681px) {
+  .bottles-mobile {
+    display: none;
+  }
+}
+
+.mobile-bottle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+}
+.mobile-bottle.classic {
+  background-image: url("../images/slide1-bottle-classic-mobile.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .mobile-bottle.classic {
+    background-image: url("../images/slide1-bottle-classic-mobile@2x.png");
+  }
+}
+.mobile-bottle.pom-blueberry {
+  background-image: url("../images/slide1-bottle-classic-mobile.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .mobile-bottle.pom-blueberry {
+    background-image: url("../images/slide1-bottle-classic-mobile@2x.png");
+  }
+}
+.mobile-bottle.cran-lime {
+  background-image: url("../images/slide1-bottle-classic-mobile.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .mobile-bottle.cran-lime {
+    background-image: url("../images/slide1-bottle-classic-mobile@2x.png");
+  }
+}
+.mobile-bottle.orange-mango {
+  background-image: url("../images/slide1-bottle-classic-mobile.png");
+  background-size: contain auto;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .mobile-bottle.orange-mango {
+    background-image: url("../images/slide1-bottle-classic-mobile@2x.png");
   }
 }
 

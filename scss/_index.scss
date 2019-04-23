@@ -313,6 +313,10 @@
       margin-left: 21vw;
     }
 
+    @include breakpoint(xs-680){
+      opacity: 0;
+    }
+
     @include breakpoint(xs){
       min-width: 250px;
       min-height: 384px;
@@ -799,6 +803,10 @@ table.nutritional-chart{
   background-size: contain;
   background-repeat: no-repeat;
 
+  @include breakpoint(xs-680){
+    display: none;
+  }
+
   &.pom-blueberry{
     @include background-2x( '../images/slide1-bottle-pom-blueberry', 'png', contain, auto, center top, no-repeat );
     top: 29%;
@@ -893,6 +901,40 @@ table.nutritional-chart{
   }
 }
 
+.bottles-mobile{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  @include breakpoint(xs-680-up){
+    display: none;
+  }
+}
+
+.mobile-bottle{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+
+  &.classic{
+    @include background-2x( '../images/slide1-bottle-classic-mobile', 'png', contain, auto, center top, no-repeat );
+  }
+
+  &.pom-blueberry{
+    @include background-2x( '../images/slide1-bottle-classic-mobile', 'png', contain, auto, center top, no-repeat );
+  }
+
+  &.cran-lime{
+    @include background-2x( '../images/slide1-bottle-classic-mobile', 'png', contain, auto, center top, no-repeat );
+  }
+
+  &.orange-mango{
+    @include background-2x( '../images/slide1-bottle-classic-mobile', 'png', contain, auto, center top, no-repeat );
+  }
+}
 
 .mint-fruit{
   position: absolute;
