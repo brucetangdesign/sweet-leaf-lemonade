@@ -121,8 +121,8 @@ $page = "home-page";
           <div class="slide-image"></div>
         </div>
         <div class="slide-copy rellax" data-rellax-speed="2">
-          <h1>Organic from day one! We wouldn't make our Lemonades any other way!</h1>
-          <p class="subtitle">Made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar and a whole lotta love to top it off.</p>
+          <h1>Organic from day one!</h1>
+          <p class="subtitle">Made with simple ingredients that you can pronounce, like organic lemon juice and organic cane sugar. We wouldn't make our Lemonades any other way!</p>
         </div>
       </div>
     </section>
