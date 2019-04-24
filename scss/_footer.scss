@@ -25,6 +25,7 @@ footer{
     font-size: getRem(18px);
     margin: 0;
     color: $sl-brown;
+    display: inline;
   }
 
   a{ color: $sl-red; }
@@ -53,6 +54,13 @@ footer{
     .footer-social-menu{
       margin-bottom: getRem(20px);
     }
+  }
+}
+
+.footer-copyright-nav{
+  li{
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

@@ -12,9 +12,10 @@ $( document ).ready(function() {
 
   //Display the mobile nav if user has scrolled on a small screen (< 768px)
   function checkScroll(){
-    if($(window).width() < 768){
+    //if($(window).width() < 768){
       if($(window).scrollTop() > 20){
         if(!scrolled){
+          console.log("dd");
           $header.addClass("scrolled");
           scrolled = true;
         }
@@ -25,12 +26,12 @@ $( document ).ready(function() {
           scrolled = false;
         }
       }
-    }
+    /*}
     else{
       scrolled = false;
       if($("header").hasClass("scrolled")){
         $("header").removeClass("scrolled");
       }
-    }
+    }*/
   }
 });

@@ -8,7 +8,10 @@
 		}
 	});
 </script>
-  <p>&copy; <?php echo date("Y"); ?> Sweet Leaf Tea</p>
+	<ul class="hr-list footer-copyright-nav">
+			<li><p>&copy; <?php echo date("Y"); ?> Sweet Leaf Tea</p></li>
+			<li><a href="https://www.sweetleaftea.com/contact/" target="_blank">Contact</a></li>
+	</ul>
   <ul class="hr-list footer-social-menu">
     <li><a href="https://www.facebook.com/sweetleaftea/" target="_blank"><i class="social-icon fb"></i></a></li>
     <li><a href="https://www.instagram.com/sweetleaftea" target="_blank"><i class="social-icon insta"></i></a></li>

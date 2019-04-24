@@ -15,9 +15,9 @@
     <div class="usda-badge"></div>
     <div class="usda-badge-mobile"></div>
   </div>
-  <nav>
+  <!--<nav>
     <ul class="hr-list">
       <li><a href="https://www.sweetleaftea.com/contact/" target="_blank">Contact</a></li>
     </ul>
-  </nav>
+  </nav>-->
 </header>
