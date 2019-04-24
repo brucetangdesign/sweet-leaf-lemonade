@@ -61,7 +61,7 @@ h1{
     color: $sl-red;
     text-transform: uppercase;
     line-height: 0.81;
-    letter-spacing: -3px;
+    letter-spacing: -8px;
 
     .larger-line{
       display: block;
@@ -70,6 +70,7 @@ h1{
 
     @include breakpoint(l){
       font-size: getRem(68px);
+      letter-spacing: -6.8px;
 
       .larger-line{
         font-size: getRem(77px);
@@ -78,6 +79,7 @@ h1{
 
     @include breakpoint(m){
       font-size: getRem(58px);
+      letter-spacing: -5.8px;
 
       .larger-line{
         font-size: getRem(66px);
@@ -86,6 +88,7 @@ h1{
 
     @include breakpoint(s){
       font-size: getRem(50px);
+      letter-spacing: -5px;
 
       .larger-line{
         font-size: getRem(56px);
@@ -139,7 +142,7 @@ p{
 }
 
 p.subtitle, .subtitle{
-  font-family: "Vision Heavy";
+  font-family: "Vision Bold";
   font-size: getRem(30px);
   margin: auto;
   line-height: 1.3;

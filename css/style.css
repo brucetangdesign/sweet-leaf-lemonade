@@ -90,7 +90,7 @@ h1.h1-sans {
   color: #d0202f;
   text-transform: uppercase;
   line-height: 0.81;
-  letter-spacing: -3px;
+  letter-spacing: -8px;
 }
 h1.h1-sans .larger-line {
   display: block;
@@ -99,6 +99,7 @@ h1.h1-sans .larger-line {
 @media (max-width: 1280px) {
   h1.h1-sans {
     font-size: 4.25rem;
+    letter-spacing: -6.8px;
   }
   h1.h1-sans .larger-line {
     font-size: 4.8125rem;
@@ -107,6 +108,7 @@ h1.h1-sans .larger-line {
 @media (max-width: 1020px) {
   h1.h1-sans {
     font-size: 3.625rem;
+    letter-spacing: -5.8px;
   }
   h1.h1-sans .larger-line {
     font-size: 4.125rem;
@@ -115,6 +117,7 @@ h1.h1-sans .larger-line {
 @media (max-width: 768px) {
   h1.h1-sans {
     font-size: 3.125rem;
+    letter-spacing: -5px;
   }
   h1.h1-sans .larger-line {
     font-size: 3.5rem;
@@ -171,7 +174,7 @@ p {
 }
 
 p.subtitle, .subtitle {
-  font-family: "Vision Heavy";
+  font-family: "Vision Bold";
   font-size: 1.875rem;
   margin: auto;
   line-height: 1.3;
